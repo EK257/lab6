@@ -1,17 +1,18 @@
 public class Main {
     public static void main(String[] args) {
         Reader[] readers = new Reader[]{
-                new Reader("Вова", "23", "BIO", "12.01.2000", "+79003282343"),
-                new Reader("Алексей", "45", "MATH", "15.03.1999", "+79901235567"),
-                new Reader("Захар", "12", "PHYS", "20.05.2001", "+79227654321"),
-                new Reader("Игорь", "39", "CHEM", "10.07.1998", "+79079876543"),
-                new Reader("Петр", "18", "HIST", "05.11.2002", "+79005381555")
+                new Reader("Иванов А.И.", "23", "BIO", "12.01.2000", "+79003282343"),
+                new Reader("Сидоров Е.В.", "45", "MATH", "15.03.1999", "+79901235567"),
+                new Reader("Петров Д.С.", "12", "PHYS", "20.05.2001", "+79227654321"),
+                new Reader("Козлов М.А.", "39", "CHEM", "10.07.1998", "+79079876543"),
+                new Reader("Никитин П.О.", "18", "HIST", "05.11.2002", "+79005381555")
         };
-
-        readers[1].takeBook(6);
-        readers[3].takeBook("Преступление и наказание", "Сказки");
-        readers[2].returnBook(2);
-        readers[0].returnBook("Война и мир", "Бородино", "Басни");
+        for(int i = 0; i < readers.length; i++){
+            readers[i].takeBook(7);
+            readers[i].takeBook("Преступление и наказание", "Сказки");
+            readers[i].returnBook(3);
+            readers[i].returnBook("Война и мир", "Бородино", "Басни");
+        }
     }
 }
 class Reader {
